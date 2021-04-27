@@ -1,6 +1,6 @@
 // Get Slider Items | Array.from [ES6 Feature]
 var sliderImages = Array.from(
-  document.querySelectorAll('.slider-container img'),
+  document.querySelectorAll('.slider-container .slide'),
 );
 
 // Get Numbers Of Slides
