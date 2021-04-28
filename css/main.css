@@ -45,26 +45,6 @@ ul {
 
 /* End Slider */
 
-/* Media */
-@media screen and (max-width: 767px) {
-}
-@media (min-width: 767px) and (max-width: 991px) {
-  .container {
-    max-width: 750px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    max-width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
-/* Media */
-
 /* Slider */
 .navbar {
   z-index: 3;
@@ -114,6 +94,78 @@ ul {
   cursor: pointer;
   color: var(--main-color);
 }
+
+/* Dropdown list */
+.links {
+  display: none;
+}
+.links .button {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.links .button span {
+  height: 2px;
+  background-color: #848484;
+  display: block;
+  width: 100%;
+}
+.links .button span:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+.links .button span:nth-of-type(2) {
+  width: 50%;
+  transition: var(--main-duration);
+}
+.links .button:hover span:nth-of-type(2) {
+  width: 100%;
+}
+.links .dropdown-list {
+  position: relative;
+  display: none;
+}
+.links:hover .dropdown-list {
+  display: block;
+}
+.links .dropdown-list::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #848484 transparent transparent transparent;
+  position: absolute;
+  bottom: -21px;
+  left: 5.2px;
+}
+.links .dropdown-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: -25px;
+  top: 15px;
+  width: 80px;
+  display: block;
+}
+.links .dropdown-list ul li {
+  background-color: transparent;
+  color: #333;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
+.links .dropdown-list ul li:hover {
+  cursor: pointer;
+}
+.links .dropdown-list ul li a {
+  text-decoration: none;
+}
+/* Dropdown list */
+
 .splide {
   height: 100vh;
   display: flex;
@@ -188,6 +240,32 @@ ul {
   display: none;
 }
 /* Slider */
+
+/* Media */
+@media screen and (max-width: 767px) {
+  .navbar ul {
+    display: none;
+  }
+  .links {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+/* Media */
 
 /* Start Link */
 .vid-link {
