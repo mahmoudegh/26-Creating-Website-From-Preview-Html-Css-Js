@@ -5,6 +5,9 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Create Website From Preview Html Css Js</title>
 
+    <!-- Slider Plugin -->
+    <link rel="stylesheet" href="css/splide-core.min.css">
+
     <!-- Main css -->
     <link rel="stylesheet" href="css/main.css" />
 
@@ -14,34 +17,48 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.css" />
   </head>
-  <body id="top">
-
-    <div class="slider-container">
-      <div id="slide-number" class="slide-number"></div>
-      <div class="slide">
-        <h1>Welcome To <span>Classic</span></h1>
-        <p>This Is Test Paragraph Number One</p>
+  <body>
+    <div class="splide">
+      <div class="navbar">
+        <div class="container">
+          <h1>CLASSIC</h1>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="slide">
-        <h1>Welcome To <span>Two</span></h1>
-        <p>This Is Test Paragraph Number Two</p>
-      </div>
-      <div class="slide">
-        <h1>Welcome To <span>Three</span></h1>
-        <p>This Is Test Paragraph Number Three</p>
-      </div>
-      <div class="slide">
-        <h1>Welcome To <span>Four</span></h1>
-        <p>This Is Test Paragraph Number Four</p>
-      </div>
-
-      <div class="slider-controls">
-        <i class="fas fa-chevron-left prev" id="prev"></i>
-        <span id="indicators" class="indicators"></span>
-        <i class="fas fa-chevron-right next" id="next"></i>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="slide-content">
+              <h1>Welcome To <span>Classic</span></h1>
+              <p>This Is Test Paragraph Number One</p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slide-content">
+              <h1>Welcome To <span>Two</span></h1>
+              <p>This Is Test Paragraph Number Two</p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slide-content">
+              <h1>Welcome To <span>Three</span></h1>
+              <p>This Is Test Paragraph Number Three</p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="slide-content">
+              <h1>Welcome To <span>Four</span></h1>
+              <p>This Is Test Paragraph Number Four</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    
     
     <!-- Videos Link -->
     <!-- <div class="vid-link">
@@ -50,7 +67,7 @@
       >
     </div> -->
     <!-- Videos Link -->
-
     <script src="js/main.js"></script>
+    <script src="js/splide.min.js"></script>
   </body>
 </html>

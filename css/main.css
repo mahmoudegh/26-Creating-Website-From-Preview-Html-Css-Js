@@ -42,102 +42,152 @@ ul {
 /* End Global Rules */
 
 /* Start Slider */
-.slider-container {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../imgs/header2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.slider-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.5;
-}
-.slider-container .slide {
-  position: absolute;
-  transform: translateX(-250%);
-  opacity: 0;
-  transition: transform 1s;
-  z-index: 1;
-}
-.slider-container .slide h1,
-.slider-container .slide p {
-  width: 100%;
-  text-align: center;
-}
-.slider-container .slide h1 {
-  font-size: 50px;
-  font-weight: 900;
-  color: #fff;
-}
-.slider-container .slide h1 span {
-  color: var(--main-color);
-}
-.slider-container .slide p {
-  color: #fff;
-  font-size: 20px;
-}
-.slider-container .slide.active {
-  transform: translateX(0);
-  opacity: 1;
-}
-.slider-container .slide-number {
-  display: none;
-}
-.slider-controls {
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.slider-controls .prev,
-.slider-controls .next {
-  background-color: #999;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  user-select: none;
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 25px;
-}
-.slider-controls .prev.disabled,
-.slider-controls .next.disabled {
-  cursor: no-drop;
-}
-.slider-controls .indicators {
-  display: none;
-}
+
 /* End Slider */
 
 /* Media */
 @media screen and (max-width: 767px) {
 }
 @media (min-width: 767px) and (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 970px;
+  }
 }
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
 }
 /* Media */
+
+/* Slider */
+.navbar {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1 {
+  color: #fff;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar ul li {
+  position: relative;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+.navbar ul li:hover:before,
+.navbar ul li a.active:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--main-color);
+}
+.navbar ul li a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #848484;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  cursor: pointer;
+  color: var(--main-color);
+}
+.splide {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../imgs/header2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.splide:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.7;
+}
+.splide .splide__track {
+  z-index: 1;
+}
+.splide__arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 2;
+}
+.splide__arrows button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #5b5b5b;
+  border: none;
+}
+.splide__arrows button:first-of-type {
+  transform: rotateY(180deg);
+}
+.splide__arrows button:hover {
+  background-color: #6f6a6a;
+}
+.splide__arrows button svg {
+  width: 20px;
+  fill: #fff;
+}
+.splide__slide .slide-content {
+  text-align: center;
+  z-index: 0;
+  color: #fff;
+}
+.splide__slide .slide-content h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+.splide__slide .slide-content h1 span {
+  color: var(--main-color);
+}
+.splide__slide .slide-content p {
+  font-size: 20px;
+}
+.splide__pagination {
+  display: none;
+}
+/* Slider */
 
 /* Start Link */
 .vid-link {
