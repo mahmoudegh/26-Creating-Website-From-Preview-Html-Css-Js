@@ -74,7 +74,7 @@ ul {
 }
 .navbar ul li:hover:before,
 .navbar ul li a.active:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -124,12 +124,13 @@ ul {
 .links .dropdown-list {
   position: relative;
   display: none;
+  transform: translateX(-100%);
 }
 .links:hover .dropdown-list {
   display: block;
 }
 .links .dropdown-list::before {
-  content: '';
+  content: "";
   width: 0;
   height: 0;
   border-width: 10px;
@@ -137,7 +138,7 @@ ul {
   border-color: #848484 transparent transparent transparent;
   position: absolute;
   bottom: -21px;
-  left: 5.2px;
+  left: 35px;
 }
 .links .dropdown-list ul {
   list-style: none;
@@ -176,7 +177,7 @@ ul {
   background-size: cover;
 }
 .splide:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
